@@ -52,24 +52,38 @@ class _BankingMainPageState extends State<BankingMainPage> {
 body: SingleChildScrollView(
   child: Column(
     children: [
-    _buildPremiumHeader(),
+      _buildPremiumHeader(),
 
       const SizedBox(height: 100),
-    _buildMenuGrid(),
+      _buildMenuGrid(),
 
-    const SizedBox(height: 20),
+      const SizedBox(height: 20),
 
-    _buildPromoBanner(),
-    _buildFooterInfo(),
+      _buildPromoBanner(),
+      _buildFooterInfo(),
 
     const SizedBox(height: 30),
     ],
   ),
 ),
 
-
-
-     ),
+bottomNavigationBar: BottomNavigationBar(
+  type: BottomNavigationBarType.fixed,
+  selectedItemColor: const Color(0xFF00529C),
+  unselectedItemColor: Colors.grey,
+  items: const [
+    BottomNavigationBarItem(
+    icon: Icon(Icons.home_filled),
+    label: "Beranda",
+    ),
+    BottomNavigationBarItem(icon: Icon(Icons.history), label: "Mutasi"),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.qr_code_scanner),
+      label: "QRIS",
+    ),
+    BottomNavigationBarItem(icon: Icon(Icons.person), label: "Akun"),
+        ],
+      ),
     );
   }
 }
