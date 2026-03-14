@@ -116,7 +116,7 @@ bottomNavigationBar: BottomNavigationBar(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Column(
-                  crossAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Selamat Datang",
@@ -152,7 +152,7 @@ bottomNavigationBar: BottomNavigationBar(
     ),
 
 
-    positioned(
+    Positioned(
       top: 90,
       child: Container(
         width: MediaQuery.of(context).size.width * 0.88,
@@ -181,16 +181,36 @@ bottomNavigationBar: BottomNavigationBar(
                   ),
                 ),
 
-                
-              ]
-            )
+                IconButton(
+                  icon: const Icon(
+                    Icons.visibility,
+                    color: Color(0xFF00529C),
+                  ),
+                  onPressed: () {
+                  },
+                ),
+              ],
+            ),
+            const Divider(height: 25, thickness: 0.5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Rp 12.500,00",
+                  style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF00529C),
+                  ),
+                ),
+                const Icon(Icons.chevron_right, color: Colors.grey),
+              ],
+            ),
           ],
-        )
-      )
-    )
-
-  ),
-      ],
+        ),
+      ),
     ),
-  }
+  ],
+);
+}
 }
