@@ -28,7 +28,8 @@ class BankingMainPage extends StatefulWidget {
 class _BankingMainPageState extends State<BankingMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: const Color(0xFFF1F5F9)
+    return Scaffold(
+      backgroundColor: const Color(0xFFF1F5F9)
 
     appBar: AppBar(
       backgroundColor: const Color(0xFF00529C),
