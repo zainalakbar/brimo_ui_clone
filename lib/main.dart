@@ -261,4 +261,26 @@ Widget _categoryItem(IconData icon, String label, Color color) {
   );
 }
 
+Widget _buildPromoBanner() {
+  return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 20),
+    height: 130,
+    width: double.infinity,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+      gradient: const LinearGradient(
+        colors: [Color(0xFF00529C), Colors.blueAccent],
+      ),
+    ),
+    child: const Center(
+      child: Text(
+        "PROMO TERBARU",
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+
+
+
 }
