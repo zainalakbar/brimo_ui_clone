@@ -213,4 +213,52 @@ bottomNavigationBar: BottomNavigationBar(
   ],
 );
 }
+
+
+Widget _buildMenuGrid() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 20),
+    child: GridView.count(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      crossAxisCount: 4,
+      mainAxisSpacing: 10,
+      crossAxisSpacing: 10,
+      children: [
+        _categoryItem(Icons.send, "Transfer", Colors.blue),
+        _categoryItem(Icons.wallet, "Dompet", Colors.orange),
+        _categoryItem(Icons.receipt_long, "BRIVA", Colors.red),
+        _categoryItem(Icons.phone_android, "Pulsa", Colors.green),
+        _categoryItem(Icons.qr_code_scanner, "QRIS", Colors.purple),
+        _categoryItem(Icons.volunteer_activism, "Donasi", Colors.pink),
+        _categoryItem(Icons.stars, "Poin", Colors.amber),
+        _categoryItem(Icons.grid_view, "Lainnya", Colors.blueGrey),
+      ],
+    ),
+  );
+}
+
+Widget _categoryItem(IconData icon, String label, Color color) {
+  return Column(
+    children: [
+      Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 5),
+          ],
+        ),
+        child: Icon(icon, color: color, size: 28),
+      ),
+      const SizedBox(height: 6),
+      Text(
+        label, 
+        style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
+      ),
+    ],
+  );
+}
+
 }
