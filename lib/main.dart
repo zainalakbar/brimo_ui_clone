@@ -282,5 +282,26 @@ Widget _buildPromoBanner() {
   }
 
 
-
+Widget _buildFooterInfo() {
+  return Container(
+    margin: const EdgeInsets.all(20),
+    padding: const EdgeInsets.all(12),
+    decoration: BoxDecoration(
+      color: Colors.blue.shade50,
+      borderRadius: BorderRadius.circular(15),
+    ),
+    child: const Row(
+      children: [
+        Icon(Icons.info_outline, color: Color(0xFF00529C)),
+        SizedBox(width: 15),
+        Expanded(
+          child: Text(
+            "Jaga selalu kerahasiaan PIN dan OTP Anda.",
+            style: TextStyle(fontSize: 12, color: Color(0xFF00529C)),
+          ),
+        ),
+      ],
+    ),
+  );
+}
 }
